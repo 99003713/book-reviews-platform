@@ -6,6 +6,7 @@ import com.learning.books.dto.rating.RatingDto;
 import com.learning.books.dto.common.ApiResponse;
 import com.learning.books.security.CustomUserDetails;
 import com.learning.books.service.RatingService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -20,6 +21,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1")
 @RequiredArgsConstructor
+@Tag(name = "Rating related Apis")
 public class RatingController {
 
     private final RatingService ratingService;

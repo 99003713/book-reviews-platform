@@ -5,6 +5,7 @@ import com.learning.books.dto.review.CreateReviewRequest;
 import com.learning.books.dto.review.ReviewDto;
 import com.learning.books.security.CustomUserDetails;
 import com.learning.books.service.ReviewService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/api/v1/books")
 @RequiredArgsConstructor
+@Tag(name = "Review related Apis")
 public class ReviewController {
 
     private final ReviewService reviewService;

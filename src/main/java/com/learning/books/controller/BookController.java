@@ -6,6 +6,7 @@ import com.learning.books.dto.book.UpdateBookRequest;
 import com.learning.books.dto.common.ApiResponse;
 import com.learning.books.security.CustomUserDetails;
 import com.learning.books.service.BookService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -25,6 +26,7 @@ import java.time.LocalDate;
 @RestController
 @RequestMapping("/api/v1/books")
 @RequiredArgsConstructor
+@Tag(name = "Book Modification Apis", description = "Book Modification Apis")
 public class BookController {
 
     private final BookService bookService;

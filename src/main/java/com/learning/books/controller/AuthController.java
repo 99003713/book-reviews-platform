@@ -7,6 +7,7 @@ import com.learning.books.entity.User;
 import com.learning.books.enums.Role;
 import com.learning.books.repository.UserRepository;
 import com.learning.books.security.JwtUtil;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.*;
@@ -29,6 +30,7 @@ import jakarta.validation.Valid;
 @RestController
 @RequestMapping("/api/v1/auth")
 @RequiredArgsConstructor
+@Tag(name = "Login_Signup Apis", description = "Login/Signup Related Apis")
 public class AuthController {
 
     private final UserRepository userRepository;
