@@ -1,0 +1,34 @@
+server:
+  port: 8080
+  name: books
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/bookdb
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update        # auto-creates/updates tables in dev
+    show-sql: false           # disable SQL printing (can enable in debug)
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          time_zone: UTC
+    open-in-view: false        # prevents lazy-loading outside transactions
+
+  jackson:
+    date-format: yyyy-MM-dd'T'HH:mm:ss.SSS'Z'
+    time-zone: UTC
+    serialization:
+      indent_output: true      # prettified JSON for readability
+
+logging:
+  level:
+    root: INFO
+    com.example.books: DEBUG   # your base package for custom logs
+  pattern:
+    console: "%d{yyyy-MM-dd'T'HH:mm:ss.SSSXXX} [%thread] %-5level [%X{traceId:-}] %logger{36} - %msg%n"
