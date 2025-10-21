@@ -12,11 +12,10 @@ A REST API platform where users can:
 - PostgreSQL (Docker)
 - JWT Authentication
 
+## Swagger Url
+http://localhost:8080/swagger-ui/index.html
+
 ## Run Locally
 ```bash
 docker-compose up -d
 mvn spring-boot:run
-
-## Swagger Url
-```bash
-http://localhost:8080/swagger-ui/index.html
