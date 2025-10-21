@@ -16,3 +16,7 @@ A REST API platform where users can:
 ```bash
 docker-compose up -d
 mvn spring-boot:run
+
+## Swagger Url
+```bash
+http://localhost:8080/swagger-ui/index.html
