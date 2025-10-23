@@ -35,9 +35,9 @@ public class RatingServiceImpl implements RatingService {
     public RatingDto addOrUpdateRating(Long bookId, Long userId, Integer ratingValue) {
         log.info("addOrUpdateRating: bookId={} userId={} rating={}", bookId, userId, ratingValue);
 
-//        if (ratingValue == null || ratingValue < 1 || ratingValue > 5) {
-//            throw new IllegalArgumentException("rating must be between 1 and 5");
-//        }
+        if (ratingValue == null || ratingValue < 1 || ratingValue > 5) {
+            throw new IllegalArgumentException("rating must be between 1 and 5");
+        }
 
         Book book = bookRepository.findById(bookId)
                 .orElseThrow(() -> new ResourceNotFoundException("Book not found: " + bookId));
